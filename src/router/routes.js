@@ -11,6 +11,22 @@ const routes = [
       {
         path: 'score',
         component: () => import('pages/Score.vue')
+      },
+      {
+        path: 'data',
+        component: () => import('pages/Data.vue')
+      },
+      {
+        path: 'logs',
+        component: () => import('pages/Logs.vue')
+      },
+      {
+        path: 'defaults',
+        component: () => import('pages/Defaults.vue')
+      },
+      {
+        path: 'models',
+        component: () => import('pages/Models.vue')
       }
     ]
   }

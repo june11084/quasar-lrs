@@ -15,7 +15,7 @@ module.exports = function (ctx) {
     ],
 
     extras: [
-      // 'ionicons-v4',
+      'ionicons-v4',
       // 'mdi-v3',
       // 'fontawesome-v5',
       // 'eva-icons',
@@ -41,13 +41,17 @@ module.exports = function (ctx) {
         'QToolbar',
         'QToolbarTitle',
         'QBtn',
+        'QBtnDropdown',
         'QIcon',
         'QList',
         'QItem',
         'QItemSection',
         'QExpansionItem',
         'QItemLabel',
-        'QUploader'
+        'QUploader',
+        'QAvatar',
+        'QMenu',
+        'QSeparator'
       ],
 
       directives: [

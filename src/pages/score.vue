@@ -6,7 +6,6 @@
           url="http://localhost:8080/upload"
           label="Upload File"
           multiple
-          style="max-width: 300px"
         />
       </div>
       <div class="col" >
