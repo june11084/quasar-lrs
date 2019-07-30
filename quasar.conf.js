@@ -40,6 +40,7 @@ module.exports = function (ctx) {
         'QPage',
         'QToolbar',
         'QToolbarTitle',
+        'QTable',
         'QBtn',
         'QBtnDropdown',
         'QIcon',
@@ -60,8 +61,12 @@ module.exports = function (ctx) {
 
       // Quasar plugins
       plugins: [
-        'Notify'
-      ]
+        'Notify',
+        'Loading'
+      ],
+      config: {
+        loading: { /* Loading defaults */ }
+      }
     },
 
     supportIE: true,
