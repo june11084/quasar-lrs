@@ -41,6 +41,9 @@ module.exports = function (ctx) {
         'QToolbar',
         'QToolbarTitle',
         'QTable',
+        'QTh',
+        'QTr',
+        'QTd',
         'QBtn',
         'QBtnDropdown',
         'QIcon',
@@ -52,6 +55,7 @@ module.exports = function (ctx) {
         'QUploader',
         'QAvatar',
         'QMenu',
+        'QMarkupTable',
         'QSeparator'
       ],
 

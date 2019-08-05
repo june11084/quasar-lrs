@@ -13,7 +13,7 @@
         </q-btn>
 
         <q-toolbar-title>
-          Location Rescore
+          Location Risk Score
         </q-toolbar-title>
         <q-btn dense flat no-wrap>
           <q-avatar rounded size="30px" icon="person"></q-avatar>
