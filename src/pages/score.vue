@@ -19,7 +19,7 @@
           row-key='id'
           dark
           color='amber'
-          rowsPerPage=10
+          :rows-per-page-options=10
         />
       </div>
     </div>
