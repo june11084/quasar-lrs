@@ -10,23 +10,23 @@ const routes = [
       },
       {
         path: 'score',
-        component: () => import('pages/Score.vue')
+        component: () => import('pages/score.vue')
       },
       {
         path: 'data',
-        component: () => import('pages/Data.vue')
+        component: () => import('pages/data.vue')
       },
       {
         path: 'logs',
-        component: () => import('pages/Logs.vue')
+        component: () => import('pages/logs.vue')
       },
       {
         path: 'defaults',
-        component: () => import('pages/Defaults.vue')
+        component: () => import('pages/defaults.vue')
       },
       {
         path: 'models',
-        component: () => import('pages/Models.vue')
+        component: () => import('pages/models.vue')
       }
     ]
   }
