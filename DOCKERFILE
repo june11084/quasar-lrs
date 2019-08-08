@@ -12,7 +12,8 @@ COPY . .
 # build app for production with minification
 # install project dependencies
 RUN npm install
-RUn npm install -g quasar-cli
+RUN npm uninstall -g quasar-cli
+RUN npm install -g @quasar/cli
 
-EXPOSE 8080
+EXPOSE 8888
 CMD [ "quasar", "dev", "-m", "pwa" ]
