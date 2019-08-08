@@ -32,6 +32,7 @@
               dense
               options-dense
               :display-value="$q.lang.table.columns"
+              emit-value
               map-options
               :options="columns"
               option-value="name"
