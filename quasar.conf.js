@@ -56,7 +56,8 @@ module.exports = function (ctx) {
         'QAvatar',
         'QMenu',
         'QMarkupTable',
-        'QSeparator'
+        'QSeparator',
+        'QSelect'
       ],
 
       directives: [

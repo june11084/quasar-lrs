@@ -20,7 +20,48 @@
           dark
           color='amber'
           :rows-per-page-options=10
-        />
+          :visible-columns="visibleColumns"
+        >
+          <template v-slot:top="props">
+            <div class="col-2 q-table__title">Scores</div>
+            <q-space />
+            <q-select
+              v-model="visibleColumns"
+              multiple
+              borderless
+              dense
+              options-dense
+              :display-value="$q.lang.table.columns"
+              map-options
+              :options="columns"
+              option-value="name"
+              style="color: teal-6; min-width:150px;"
+              bg-color="grey-8"
+              rounded
+            />
+            <q-btn-dropdown class= "on-right absolute-right vertical-middle" align="between" push color="primary" icon="cloud_download" label="Export">
+              <q-list>
+                <q-item clickable v-close-popup @click="onItemClick">
+                  <q-item-section>
+                    <q-item-label>CSV</q-item-label>
+                  </q-item-section>
+                </q-item>
+
+                <q-item clickable v-close-popup @click="onItemClick">
+                  <q-item-section>
+                    <q-item-label>RDS</q-item-label>
+                  </q-item-section>
+                </q-item>
+
+                <q-item clickable v-close-popup @click="onItemClick">
+                  <q-item-section>
+                    <q-item-label>ZIP</q-item-label>
+                  </q-item-section>
+                </q-item>
+              </q-list>
+            </q-btn-dropdown>
+          </template>
+        </q-table>
       </div>
     </div>
   </q-page>
@@ -41,6 +82,7 @@ import { QSpinnerGears } from 'quasar'
 export default {
   data () {
     return {
+      visibleColumns: ['Latitude', 'Longitude', 'Policy Number', 'Occupancy Code', 'Building Area', 'Total Insured Value', 'Risk Score'],
       columns: [
         { name: 'Latitude', align: 'center', label: 'Latitude', field: 'Latitude' },
         { name: 'Longitude', align: 'center', label: 'Longitude', field: 'Longitude' },

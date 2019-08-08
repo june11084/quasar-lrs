@@ -99,6 +99,15 @@
               <q-item-label caption>quasar.dev</q-item-label>
             </q-item-section>
           </q-item>
+          <q-item clickable tag="a" target="_blank" href="https://boxworkbench.eastus.cloudapp.azure.com/BoxWorkbench/login">
+            <q-item-section avatar>
+              <q-icon name="inbox" />
+            </q-item-section>
+            <q-item-section>
+              <q-item-label>Prototype</q-item-label>
+              <q-item-label caption>The Box</q-item-label>
+            </q-item-section>
+          </q-item>
           <q-item clickable tag="a" to='/defaults'>
             <q-item-section avatar>
               <q-icon name="settings" />
