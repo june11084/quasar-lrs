@@ -27,6 +27,10 @@ const routes = [
       {
         path: 'models',
         component: () => import('pages/models.vue')
+      },
+      {
+        path: 'maggie',
+        component: () => import('pages/maggie.vue')
       }
     ]
   }

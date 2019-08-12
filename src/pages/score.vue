@@ -19,7 +19,7 @@
           row-key='id'
           dark
           color='amber'
-          :rows-per-page-options=10
+          :pagination.sync= "pagination"
           :visible-columns="visibleColumns"
         >
           <template v-slot:top="props">
@@ -40,29 +40,29 @@
               bg-color="grey-8"
               rounded
             />
-            <q-btn-dropdown class= "on-right absolute-right vertical-middle" align="between" push color="primary" icon="cloud_download" label="Export">
-              <q-list>
-                <q-item clickable v-close-popup @click="onItemClick">
-                  <q-item-section>
-                    <q-item-label>CSV</q-item-label>
-                  </q-item-section>
-                </q-item>
-
-                <q-item clickable v-close-popup @click="onItemClick">
-                  <q-item-section>
-                    <q-item-label>RDS</q-item-label>
-                  </q-item-section>
-                </q-item>
-
-                <q-item clickable v-close-popup @click="onItemClick">
-                  <q-item-section>
-                    <q-item-label>ZIP</q-item-label>
-                  </q-item-section>
-                </q-item>
-              </q-list>
-            </q-btn-dropdown>
           </template>
         </q-table>
+        <q-btn-dropdown class= "vertical-middle" align="between" push color="primary" icon="cloud_download" label="Export">
+          <q-list>
+            <q-item clickable v-close-popup @click="onItemClick">
+              <q-item-section>
+                <q-item-label>CSV</q-item-label>
+              </q-item-section>
+            </q-item>
+
+            <q-item clickable v-close-popup @click="onItemClick">
+              <q-item-section>
+                <q-item-label>RDS</q-item-label>
+              </q-item-section>
+            </q-item>
+
+            <q-item clickable v-close-popup @click="onItemClick">
+              <q-item-section>
+                <q-item-label>ZIP</q-item-label>
+              </q-item-section>
+            </q-item>
+          </q-list>
+        </q-btn-dropdown>
       </div>
     </div>
   </q-page>
@@ -83,6 +83,7 @@ import { QSpinnerGears } from 'quasar'
 export default {
   data () {
     return {
+      pagination: { rowsPerPage: 50 },
       visibleColumns: ['Latitude', 'Longitude', 'Policy Number', 'Occupancy Code', 'Building Area', 'Total Insured Value', 'Risk Score'],
       columns: [
         { name: 'Latitude', align: 'center', label: 'Latitude', field: 'Latitude' },

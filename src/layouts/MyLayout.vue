@@ -90,13 +90,13 @@
               <q-item-label>Logs</q-item-label>
             </q-item-section>
           </q-item>
-          <q-item clickable tag="a" target="_blank" href="https://quasar.dev">
+          <q-item clickable tag="a" to="/maggie">
             <q-item-section avatar>
               <q-icon name="map" />
             </q-item-section>
             <q-item-section>
               <q-item-label>MAGGIE</q-item-label>
-              <q-item-label caption>quasar.dev</q-item-label>
+              <q-item-label caption>Maggie Tool</q-item-label>
             </q-item-section>
           </q-item>
           <q-item clickable tag="a" target="_blank" href="https://boxworkbench.eastus.cloudapp.azure.com/BoxWorkbench/login">
